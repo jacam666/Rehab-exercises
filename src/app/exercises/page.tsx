@@ -49,7 +49,7 @@ export default function ExercisesPage() {
                         className="rounded-lg border border-gray-200"
                       />
                       <div className="flex-1">
-                        <h3 className="text-lg font-semibold mb-2">Straight Leg Raises</h3>
+                        <h3 className="text-lg font-semibold mb-2 text-blue-600">Straight Leg Raises</h3>
                         <p className="text-gray-600 mb-3">Strengthens quadriceps without bending the knee</p>
                         <div className="text-sm text-gray-500">
                           <p><strong>Sets:</strong> 3 sets of 10-15 reps</p>
@@ -69,7 +69,7 @@ export default function ExercisesPage() {
                         className="rounded-lg border border-gray-200"
                       />
                       <div className="flex-1">
-                        <h3 className="text-lg font-semibold mb-2">Wall Sits</h3>
+                        <h3 className="text-lg font-semibold mb-2 text-blue-600">Wall Sits</h3>
                         <p className="text-gray-600 mb-3">Builds endurance in quadriceps and glutes</p>
                         <div className="text-sm text-gray-500">
                           <p><strong>Duration:</strong> Hold for 20-30 seconds, 3 times</p>
@@ -89,7 +89,7 @@ export default function ExercisesPage() {
                         className="rounded-lg border border-gray-200"
                       />
                       <div className="flex-1">
-                        <h3 className="text-lg font-semibold mb-2">Clamshells</h3>
+                        <h3 className="text-lg font-semibold mb-2 text-blue-600">Clamshells</h3>
                         <p className="text-gray-600 mb-3">Strengthens hip abductors and external rotators</p>
                         <div className="text-sm text-gray-500">
                           <p><strong>Sets:</strong> 2 sets of 15 reps each side</p>
@@ -109,7 +109,7 @@ export default function ExercisesPage() {
                         className="rounded-lg border border-gray-200"
                       />
                       <div className="flex-1">
-                        <h3 className="text-lg font-semibold mb-2">Glute Bridges</h3>
+                        <h3 className="text-lg font-semibold mb-2 text-blue-600">Glute Bridges</h3>
                         <p className="text-gray-600 mb-3">Activates glutes and supports knee alignment</p>
                         <div className="text-sm text-gray-500">
                           <p><strong>Sets:</strong> 3 sets of 12-15 reps</p>
@@ -142,7 +142,7 @@ export default function ExercisesPage() {
                         className="rounded-lg border border-gray-200"
                       />
                       <div className="flex-1">
-                        <h3 className="text-lg font-semibold mb-2">IT Band Stretch</h3>
+                        <h3 className="text-lg font-semibold mb-2 text-green-600">IT Band Stretch</h3>
                         <p className="text-gray-600 mb-3">Reduces tension in the iliotibial band</p>
                         <div className="text-sm text-gray-500">
                           <p><strong>Hold:</strong> 30 seconds each side, 2-3 times</p>
@@ -162,7 +162,7 @@ export default function ExercisesPage() {
                         className="rounded-lg border border-gray-200"
                       />
                       <div className="flex-1">
-                        <h3 className="text-lg font-semibold mb-2">Hip Flexor Stretch</h3>
+                        <h3 className="text-lg font-semibold mb-2 text-green-600">Hip Flexor Stretch</h3>
                         <p className="text-gray-600 mb-3">Releases tight hip flexors that affect knee tracking</p>
                         <div className="text-sm text-gray-500">
                           <p><strong>Hold:</strong> 30 seconds each side, 2 times</p>
@@ -182,7 +182,7 @@ export default function ExercisesPage() {
                         className="rounded-lg border border-gray-200"
                       />
                       <div className="flex-1">
-                        <h3 className="text-lg font-semibold mb-2">Hamstring Stretch</h3>
+                        <h3 className="text-lg font-semibold mb-2 text-green-600">Hamstring Stretch</h3>
                         <p className="text-gray-600 mb-3">Improves posterior leg flexibility</p>
                         <div className="text-sm text-gray-500">
                           <p><strong>Hold:</strong> 30 seconds each leg, 2-3 times</p>
@@ -202,7 +202,7 @@ export default function ExercisesPage() {
                         className="rounded-lg border border-gray-200"
                       />
                       <div className="flex-1">
-                        <h3 className="text-lg font-semibold mb-2">Calf Stretch</h3>
+                        <h3 className="text-lg font-semibold mb-2 text-green-600">Calf Stretch</h3>
                         <p className="text-gray-600 mb-3">Releases calf tightness affecting knee mechanics</p>
                         <div className="text-sm text-gray-500">
                           <p><strong>Hold:</strong> 30 seconds each leg, 2 times</p>
@@ -226,7 +226,7 @@ export default function ExercisesPage() {
                 <div className="space-y-6">
                   
                   <div className="border-l-4 border-purple-500 pl-4">
-                    <h3 className="text-lg font-semibold mb-2">Swimming</h3>
+                    <h3 className="text-lg font-semibold mb-2 text-purple-600">Swimming</h3>
                     <p className="text-gray-600 mb-3">Excellent full-body, zero-impact exercise</p>
                     <div className="text-sm text-gray-500">
                       <p><strong>Duration:</strong> 20-30 minutes, 3x per week</p>
@@ -235,7 +235,7 @@ export default function ExercisesPage() {
                   </div>
 
                   <div className="border-l-4 border-purple-500 pl-4">
-                    <h3 className="text-lg font-semibold mb-2">Stationary Cycling</h3>
+                    <h3 className="text-lg font-semibold mb-2 text-purple-600">Stationary Cycling</h3>
                     <p className="text-gray-600 mb-3">Low-impact cardio that strengthens legs</p>
                     <div className="text-sm text-gray-500">
                       <p><strong>Duration:</strong> 15-30 minutes, start with low resistance</p>
@@ -244,7 +244,7 @@ export default function ExercisesPage() {
                   </div>
 
                   <div className="border-l-4 border-purple-500 pl-4">
-                    <h3 className="text-lg font-semibold mb-2">Water Walking</h3>
+                    <h3 className="text-lg font-semibold mb-2 text-purple-600">Water Walking</h3>
                     <p className="text-gray-600 mb-3">Gentle resistance training in water</p>
                     <div className="text-sm text-gray-500">
                       <p><strong>Duration:</strong> 20-30 minutes in chest-deep water</p>
@@ -253,7 +253,7 @@ export default function ExercisesPage() {
                   </div>
 
                   <div className="border-l-4 border-purple-500 pl-4">
-                    <h3 className="text-lg font-semibold mb-2">Elliptical Machine</h3>
+                    <h3 className="text-lg font-semibold mb-2 text-purple-600">Elliptical Machine</h3>
                     <p className="text-gray-600 mb-3">Smooth, low-impact full-body workout</p>
                     <div className="text-sm text-gray-500">
                       <p><strong>Duration:</strong> 15-25 minutes, low to moderate intensity</p>
@@ -275,7 +275,7 @@ export default function ExercisesPage() {
                 <div className="space-y-6">
                   
                   <div className="border-l-4 border-orange-500 pl-4">
-                    <h3 className="text-lg font-semibold mb-2">Week 1-2: Foundation</h3>
+                    <h3 className="text-lg font-semibold mb-2 text-orange-600">Week 1-2: Foundation</h3>
                     <p className="text-gray-600 mb-3">Focus on pain reduction and gentle movement</p>
                     <div className="text-sm text-gray-500">
                       <p>• Pain-free range of motion exercises</p>
@@ -285,7 +285,7 @@ export default function ExercisesPage() {
                   </div>
 
                   <div className="border-l-4 border-orange-500 pl-4">
-                    <h3 className="text-lg font-semibold mb-2">Week 3-4: Building</h3>
+                    <h3 className="text-lg font-semibold mb-2 text-orange-600">Week 3-4: Building</h3>
                     <p className="text-gray-600 mb-3">Increase exercise intensity and duration</p>
                     <div className="text-sm text-gray-500">
                       <p>• Longer stretching holds (30 seconds)</p>
@@ -295,7 +295,7 @@ export default function ExercisesPage() {
                   </div>
 
                   <div className="border-l-4 border-orange-500 pl-4">
-                    <h3 className="text-lg font-semibold mb-2">Week 5-8: Strengthening</h3>
+                    <h3 className="text-lg font-semibold mb-2 text-orange-600">Week 5-8: Strengthening</h3>
                     <p className="text-gray-600 mb-3">Focus on building muscle strength and endurance</p>
                     <div className="text-sm text-gray-500">
                       <p>• Add resistance bands or light weights</p>
@@ -305,7 +305,7 @@ export default function ExercisesPage() {
                   </div>
 
                   <div className="border-l-4 border-orange-500 pl-4">
-                    <h3 className="text-lg font-semibold mb-2">Week 9+: Maintenance</h3>
+                    <h3 className="text-lg font-semibold mb-2 text-orange-600">Week 9+: Maintenance</h3>
                     <p className="text-gray-600 mb-3">Maintain gains and prevent re-injury</p>
                     <div className="text-sm text-gray-500">
                       <p>• Continue strengthening 3x per week</p>
