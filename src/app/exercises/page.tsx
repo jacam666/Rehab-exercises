@@ -1,7 +1,19 @@
+"use client"
 import Link from "next/link";
 import Image from "next/image";
+import { useState } from "react";
 
 export default function ExercisesPage() {
+  const [fullscreenVideo, setFullscreenVideo] = useState<string | null>(null);
+
+  const openFullscreen = (videoId: string) => {
+    setFullscreenVideo(videoId);
+  };
+
+  const closeFullscreen = () => {
+    setFullscreenVideo(null);
+  };
+
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Header */}
@@ -41,19 +53,32 @@ export default function ExercisesPage() {
                   
                   <div className="border-l-4 border-blue-500 pl-4">
                     <div className="flex items-start space-x-4 mb-4">
-                      <Image
-                        src="/images/photo-to-come.jpg"
-                        alt="Straight Leg Raise Exercise"
-                        width={120}
-                        height={90}
-                        className="rounded-lg border border-gray-200"
-                      />
+                      <div 
+                        className="relative cursor-pointer hover:opacity-80 transition-opacity"
+                        onClick={() => openFullscreen("tJMGfLH4KQg?si=A_dTSDOVuiLd0yf5")}
+                      >
+                        <iframe
+                          width="120"
+                          height="90"
+                          src="https://www.youtube.com/embed/tJMGfLH4KQg?si=A_dTSDOVuiLd0yf5"
+                          title="Straight Leg Raise Exercise"
+                          frameBorder="0"
+                          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                          allowFullScreen
+                          className="rounded-lg border border-gray-200 pointer-events-none"
+                        ></iframe>
+                        <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-0 hover:bg-opacity-20 rounded-lg transition-all">
+                          <div className="w-8 h-8 bg-white bg-opacity-80 rounded-full flex items-center justify-center">
+                            <span className="text-gray-800 text-lg">▶</span>
+                          </div>
+                        </div>
+                      </div>
                       <div className="flex-1">
                         <h3 className="text-lg font-semibold mb-2 text-blue-600">Straight Leg Raises</h3>
-                        <p className="text-gray-600 mb-3">Strengthens quadriceps without bending the knee</p>
+                        <p className="text-gray-600 mb-3">Strengthens hip flexor without bending the knee</p>
                         <div className="text-sm text-gray-500">
                           <p><strong>Sets:</strong> 3 sets of 10-15 reps</p>
-                          <p><strong>Instructions:</strong> Lie on back, lift straight leg 6 inches, hold 5 seconds</p>
+                          <p><strong>Instructions:</strong> Lie on back, lift straight leg 10 inches, hold 5 seconds</p>
                         </div>
                       </div>
                     </div>
@@ -61,13 +86,26 @@ export default function ExercisesPage() {
 
                   <div className="border-l-4 border-blue-500 pl-4">
                     <div className="flex items-start space-x-4 mb-4">
-                      <Image
-                        src="/images/photo-to-come.jpg"
-                        alt="Wall Sit Exercise"
-                        width={120}
-                        height={90}
-                        className="rounded-lg border border-gray-200"
-                      />
+                      <div 
+                        className="relative cursor-pointer hover:opacity-80 transition-opacity"
+                        onClick={() => openFullscreen("JaZNYM3zAP0")}
+                      >
+                        <iframe
+                          width="120"
+                          height="90"
+                          src="https://www.youtube.com/embed/JaZNYM3zAP0"
+                          title="Wall Sits Exercise"
+                          frameBorder="0"
+                          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                          allowFullScreen
+                          className="rounded-lg border border-gray-200 pointer-events-none"
+                        ></iframe>
+                        <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-0 hover:bg-opacity-20 rounded-lg transition-all">
+                          <div className="w-8 h-8 bg-white bg-opacity-80 rounded-full flex items-center justify-center">
+                            <span className="text-gray-800 text-lg">▶</span>
+                          </div>
+                        </div>
+                      </div>
                       <div className="flex-1">
                         <h3 className="text-lg font-semibold mb-2 text-blue-600">Wall Sits</h3>
                         <p className="text-gray-600 mb-3">Builds endurance in quadriceps and glutes</p>
@@ -81,13 +119,26 @@ export default function ExercisesPage() {
 
                   <div className="border-l-4 border-blue-500 pl-4">
                     <div className="flex items-start space-x-4 mb-4">
-                      <Image
-                        src="/images/photo-to-come.jpg"
-                        alt="Clamshell Exercise"
-                        width={120}
-                        height={90}
-                        className="rounded-lg border border-gray-200"
-                      />
+                      <div 
+                        className="relative cursor-pointer hover:opacity-80 transition-opacity"
+                        onClick={() => openFullscreen("1ECrWm-3SKo")}
+                      >
+                        <iframe
+                          width="120"
+                          height="90"
+                          src="https://www.youtube.com/embed/1ECrWm-3SKo"
+                          title="Clamshell Exercise"
+                          frameBorder="0"
+                          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                          allowFullScreen
+                          className="rounded-lg border border-gray-200 pointer-events-none"
+                        ></iframe>
+                        <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-0 hover:bg-opacity-20 rounded-lg transition-all">
+                          <div className="w-8 h-8 bg-white bg-opacity-80 rounded-full flex items-center justify-center">
+                            <span className="text-gray-800 text-lg">▶</span>
+                          </div>
+                        </div>
+                      </div>
                       <div className="flex-1">
                         <h3 className="text-lg font-semibold mb-2 text-blue-600">Clamshells</h3>
                         <p className="text-gray-600 mb-3">Strengthens hip abductors and external rotators</p>
@@ -101,13 +152,26 @@ export default function ExercisesPage() {
 
                   <div className="border-l-4 border-blue-500 pl-4">
                     <div className="flex items-start space-x-4 mb-4">
-                      <Image
-                        src="/images/photo-to-come.jpg"
-                        alt="Glute Bridge Exercise"
-                        width={120}
-                        height={90}
-                        className="rounded-lg border border-gray-200"
-                      />
+                      <div 
+                        className="relative cursor-pointer hover:opacity-80 transition-opacity"
+                        onClick={() => openFullscreen("fK_xUE3OKIE?si=Mz59RZEQx6VOWxip")}
+                      >
+                        <iframe
+                          width="120"
+                          height="90"
+                          src="https://www.youtube.com/embed/fK_xUE3OKIE?si=Mz59RZEQx6VOWxip"
+                          title="Glute Bridge Exercise"
+                          frameBorder="0"
+                          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                          allowFullScreen
+                          className="rounded-lg border border-gray-200 pointer-events-none"
+                        ></iframe>
+                        <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-0 hover:bg-opacity-20 rounded-lg transition-all">
+                          <div className="w-8 h-8 bg-white bg-opacity-80 rounded-full flex items-center justify-center">
+                            <span className="text-gray-800 text-lg">▶</span>
+                          </div>
+                        </div>
+                      </div>
                       <div className="flex-1">
                         <h3 className="text-lg font-semibold mb-2 text-blue-600">Glute Bridges</h3>
                         <p className="text-gray-600 mb-3">Activates glutes and supports knee alignment</p>
@@ -134,13 +198,26 @@ export default function ExercisesPage() {
                   
                   <div className="border-l-4 border-green-500 pl-4">
                     <div className="flex items-start space-x-4 mb-4">
-                      <Image
-                        src="/images/photo-to-come.jpg"
-                        alt="IT Band Stretch"
-                        width={120}
-                        height={90}
-                        className="rounded-lg border border-gray-200"
-                      />
+                      <div 
+                        className="relative cursor-pointer hover:opacity-80 transition-opacity"
+                        onClick={() => openFullscreen("bJuV3ZQVfJ4")}
+                      >
+                        <iframe
+                          width="120"
+                          height="90"
+                          src="https://www.youtube.com/embed/bJuV3ZQVfJ4"
+                          title="IT Band Stretch"
+                          frameBorder="0"
+                          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                          allowFullScreen
+                          className="rounded-lg border border-gray-200 pointer-events-none"
+                        ></iframe>
+                        <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-0 hover:bg-opacity-20 rounded-lg transition-all">
+                          <div className="w-8 h-8 bg-white bg-opacity-80 rounded-full flex items-center justify-center">
+                            <span className="text-gray-800 text-lg">▶</span>
+                          </div>
+                        </div>
+                      </div>
                       <div className="flex-1">
                         <h3 className="text-lg font-semibold mb-2 text-green-600">IT Band Stretch</h3>
                         <p className="text-gray-600 mb-3">Reduces tension in the iliotibial band</p>
@@ -154,13 +231,27 @@ export default function ExercisesPage() {
 
                   <div className="border-l-4 border-green-500 pl-4">
                     <div className="flex items-start space-x-4 mb-4">
-                      <Image
-                        src="/images/photo-to-come.jpg"
-                        alt="Hip Flexor Stretch"
-                        width={120}
-                        height={90}
-                        className="rounded-lg border border-gray-200"
-                      />
+                      <div 
+                        className="relative cursor-pointer hover:opacity-80 transition-opacity"
+                        onClick={() => openFullscreen("sDn-UtqdX58?si=GCvDkUFO5vRXehOc")}
+                      >
+                        
+                        <iframe
+                          width="120"
+                          height="90"
+                          src="https://www.youtube.com/embed/sDn-UtqdX58?si=GCvDkUFO5vRXehOc"
+                          title="Hip Flexor Stretch"
+                          frameBorder="0"
+                          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                          allowFullScreen
+                          className="rounded-lg border border-gray-200 pointer-events-none"
+                        ></iframe>
+                        <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-0 hover:bg-opacity-20 rounded-lg transition-all">
+                          <div className="w-8 h-8 bg-white bg-opacity-80 rounded-full flex items-center justify-center">
+                            <span className="text-gray-800 text-lg">▶</span>
+                          </div>
+                        </div>
+                      </div>
                       <div className="flex-1">
                         <h3 className="text-lg font-semibold mb-2 text-green-600">Hip Flexor Stretch</h3>
                         <p className="text-gray-600 mb-3">Releases tight hip flexors that affect knee tracking</p>
@@ -174,13 +265,26 @@ export default function ExercisesPage() {
 
                   <div className="border-l-4 border-green-500 pl-4">
                     <div className="flex items-start space-x-4 mb-4">
-                      <Image
-                        src="/images/photo-to-come.jpg"
-                        alt="Hamstring Stretch"
-                        width={120}
-                        height={90}
-                        className="rounded-lg border border-gray-200"
-                      />
+                      <div 
+                        className="relative cursor-pointer hover:opacity-80 transition-opacity"
+                        onClick={() => openFullscreen("3mfIHcjSCtY")}
+                      >
+                        <iframe
+                          width="120"
+                          height="90"
+                          src="https://www.youtube.com/embed/3mfIHcjSCtY"
+                          title="Hamstring Stretch"
+                          frameBorder="0"
+                          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                          allowFullScreen
+                          className="rounded-lg border border-gray-200 pointer-events-none"
+                        ></iframe>
+                        <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-0 hover:bg-opacity-20 rounded-lg transition-all">
+                          <div className="w-8 h-8 bg-white bg-opacity-80 rounded-full flex items-center justify-center">
+                            <span className="text-gray-800 text-lg">▶</span>
+                          </div>
+                        </div>
+                      </div>
                       <div className="flex-1">
                         <h3 className="text-lg font-semibold mb-2 text-green-600">Hamstring Stretch</h3>
                         <p className="text-gray-600 mb-3">Improves posterior leg flexibility</p>
@@ -194,13 +298,26 @@ export default function ExercisesPage() {
 
                   <div className="border-l-4 border-green-500 pl-4">
                     <div className="flex items-start space-x-4 mb-4">
-                      <Image
-                        src="/images/photo-to-come.jpg"
-                        alt="Calf Stretch"
-                        width={120}
-                        height={90}
-                        className="rounded-lg border border-gray-200"
-                      />
+                      <div 
+                        className="relative cursor-pointer hover:opacity-80 transition-opacity"
+                        onClick={() => openFullscreen("CuDoklMpFWo?si=-zNqmkfeNzMQ110w")}
+                      >
+                        <iframe
+                          width="120"
+                          height="90"
+                          src="https://www.youtube.com/embed/CuDoklMpFWo?si=-zNqmkfeNzMQ110w"
+                          title="Calf Stretch"
+                          frameBorder="0"
+                          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                          allowFullScreen
+                          className="rounded-lg border border-gray-200 pointer-events-none"
+                        ></iframe>
+                        <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-0 hover:bg-opacity-20 rounded-lg transition-all">
+                          <div className="w-8 h-8 bg-white bg-opacity-80 rounded-full flex items-center justify-center">
+                            <span className="text-gray-800 text-lg">▶</span>
+                          </div>
+                        </div>
+                      </div>
                       <div className="flex-1">
                         <h3 className="text-lg font-semibold mb-2 text-green-600">Calf Stretch</h3>
                         <p className="text-gray-600 mb-3">Releases calf tightness affecting knee mechanics</p>
@@ -349,6 +466,31 @@ export default function ExercisesPage() {
           </p>
         </div>
       </footer>
+
+      {/* Fullscreen Video Modal */}
+      {fullscreenVideo && (
+        <div className="fixed inset-0 bg-black bg-opacity-90 z-50 flex items-center justify-center p-4">
+          <div className="relative w-full max-w-6xl">
+            <button
+              onClick={closeFullscreen}
+              className="absolute -top-12 right-0 text-white text-xl hover:text-gray-300 transition-colors z-10 flex items-center space-x-2"
+            >
+              <span>✕</span>
+              <span className="text-sm">Close</span>
+            </button>
+            <div className="relative w-full" style={{ paddingBottom: '56.25%' }}>
+              <iframe
+                className="absolute inset-0 w-full h-full rounded-lg"
+                src={`https://www.youtube.com/embed/${fullscreenVideo}?autoplay=1`}
+                title="Exercise Video"
+                frameBorder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+              ></iframe>
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 }
