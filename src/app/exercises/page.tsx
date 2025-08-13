@@ -186,6 +186,7 @@ export default function ExercisesPage() {
                 </div>
               </div>
             </div>
+            {/* banded strengthening Exercises */}
 
             <div className="bg-white rounded-lg shadow-lg overflow-hidden">
               <div className="bg-pink-600 text-white p-6">
@@ -326,7 +327,6 @@ export default function ExercisesPage() {
                       </div>
                     </div>
                   </div>
-
                 </div>
               </div>
             </div>
@@ -521,10 +521,155 @@ export default function ExercisesPage() {
                       <p><strong>Tip:</strong> Keep movements smooth and controlled</p>
                     </div>
                   </div>
-
                 </div>
               </div>
             </div>
+
+            {/* Pilates Exercises */}
+
+            <div className="bg-white rounded-lg shadow-lg overflow-hidden">
+              <div className="bg-yellow-400 text-white p-6">
+                <h2 className="text-2xl font-bold mb-2">🧘‍♀️ Pilates Exercises</h2>
+                <p className="opacity-90">Increase core strength and stability</p>
+              </div>
+              <div className="p-6">
+                <div className="space-y-6">
+                  
+                  <div className="border-l-4 border-yellow-400 pl-4">
+                    <div className="flex items-start space-x-4 mb-4">
+                      <div 
+                        className="relative cursor-pointer hover:opacity-80 transition-opacity"
+                        onClick={() => openFullscreen("QAHS3k_LHs4?si=aTbQNpLkz90iaqYl")}
+                      >
+                        <iframe
+                          width="120"
+                          height="90"
+                          src="https://www.youtube.com/embed/QAHS3k_LHs4?si=aTbQNpLkz90iaqYl"
+                          title="Straight Leg Raise Exercise"
+                          frameBorder="0"
+                          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                          allowFullScreen
+                          className="rounded-lg border border-gray-200 pointer-events-none"
+                        ></iframe>
+                        <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-0 hover:bg-opacity-20 rounded-lg transition-all">
+                          <div className="w-8 h-8 bg-white bg-opacity-80 rounded-full flex items-center justify-center">
+                            <span className="text-gray-800 text-lg">▶</span>
+                          </div>
+                        </div>
+                      </div>
+                      <div className="flex-1">
+                        <h3 className="text-lg font-semibold mb-2 text-yellow-400">Torpedo</h3>
+                        <p className="text-gray-600 mb-3">Strengthens core muscles</p>
+                        <div className="text-sm text-gray-500">
+                          <p><strong>Hold:</strong> 5 breaths x 10</p>
+                          <p><strong>Instructions:</strong> Lie on side, lift legs, keep thighs connected, hold 5 breaths</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="border-l-4 border-yellow-400 pl-4">
+                    <div className="flex items-start space-x-4 mb-4">
+                      <div 
+                        className="relative cursor-pointer hover:opacity-80 transition-opacity"
+                        onClick={() => openFullscreen("oprYBFtPfOY?si=f83muWLZheq8pth7")}
+                      >
+                        <iframe
+                          width="120"
+                          height="90"
+                          src="https://www.youtube.com/embed/oprYBFtPfOY?si=f83muWLZheq8pth7"
+                          title="Wall Sits Exercise"
+                          frameBorder="0"
+                          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                          allowFullScreen
+                          className="rounded-lg border border-gray-200 pointer-events-none"
+                        ></iframe>
+                        <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-0 hover:bg-opacity-20 rounded-lg transition-all">
+                          <div className="w-8 h-8 bg-white bg-opacity-80 rounded-full flex items-center justify-center">
+                            <span className="text-gray-800 text-lg">▶</span>
+                          </div>
+                        </div>
+                      </div>
+                      <div className="flex-1">
+                        <h3 className="text-lg font-semibold mb-2 text-yellow-400">Hip Rolls</h3>
+                        <p className="text-gray-600 mb-3">Strengthens lower back, hips and core</p>
+                        <div className="text-sm text-gray-500">
+                          <p><strong>Sets:</strong> 10 times each side</p>
+                          <p><strong>Instructions:</strong> Roll both knees to one side, allow head to roll to opposite side</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="border-l-4 border-yellow-400 pl-4">
+                    <div className="flex items-start space-x-4 mb-4">
+                      <div 
+                        className="relative cursor-pointer hover:opacity-80 transition-opacity"
+                        onClick={() => openFullscreen("RhpTvbPwnoA?si=tfh-P8TsXf6QrFVd")}
+                      >
+                        <iframe
+                          width="120"
+                          height="90"
+                          src="https://www.youtube.com/embed/RhpTvbPwnoA?si=tfh-P8TsXf6QrFVd"
+                          title="Clamshell Exercise"
+                          frameBorder="0"
+                          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                          allowFullScreen
+                          className="rounded-lg border border-gray-200 pointer-events-none"
+                        ></iframe>
+                        <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-0 hover:bg-opacity-20 rounded-lg transition-all">
+                          <div className="w-8 h-8 bg-white bg-opacity-80 rounded-full flex items-center justify-center">
+                            <span className="text-gray-800 text-lg">▶</span>
+                          </div>
+                        </div>
+                      </div>
+                      <div className="flex-1">
+                        <h3 className="text-lg font-semibold mb-2 text-yellow-400">Shoulder bridge spine curls with overhead arms</h3>
+                        <p className="text-gray-600 mb-3">Strengthens core  and shoulder mobility</p>
+                        <div className="text-sm text-gray-500">
+                          <p><strong>Sets:</strong> 2 sets of 15 reps</p>
+                          <p><strong>Instructions:</strong> Roll spine off of mat, move arms above head</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="border-l-4 border-yellow-400 pl-4">
+                    <div className="flex items-start space-x-4 mb-4">
+                      <div 
+                        className="relative cursor-pointer hover:opacity-80 transition-opacity"
+                        onClick={() => openFullscreen("SJyQaTI2H_4?si=rVAtWL-BbrI6VBf9")}
+                      >
+                        <iframe
+                          width="120"
+                          height="90"
+                          src="https://www.youtube.com/embed/SJyQaTI2H_4?si=rVAtWL-BbrI6VBf9"
+                          title="Glute Bridge Exercise"
+                          frameBorder="0"
+                          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                          allowFullScreen
+                          className="rounded-lg border border-gray-200 pointer-events-none"
+                        ></iframe>
+                        <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-0 hover:bg-opacity-20 rounded-lg transition-all">
+                          <div className="w-8 h-8 bg-white bg-opacity-80 rounded-full flex items-center justify-center">
+                            <span className="text-gray-800 text-lg">▶</span>
+                          </div>
+                        </div>
+                      </div>
+                      <div className="flex-1">
+                        <h3 className="text-lg font-semibold mb-2 text-yellow-400">Washrag</h3>
+                        <p className="text-gray-600 mb-3">Improves back, hip, neck, and shoulder mobility</p>
+                        <div className="text-sm text-gray-500">
+                          <p><strong>Sets:</strong> 3 sets of 12</p>
+                          <p><strong>Instructions:</strong> Lie on back, knees bent, arms out to side, turn one arm up, one arm down</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
 
             {/* Progressive Plans */}
             <div className="bg-white rounded-lg shadow-lg overflow-hidden">
