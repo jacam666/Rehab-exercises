@@ -187,6 +187,150 @@ export default function ExercisesPage() {
               </div>
             </div>
 
+            <div className="bg-white rounded-lg shadow-lg overflow-hidden">
+              <div className="bg-pink-600 text-white p-6">
+                <h2 className="text-2xl font-bold mb-2">💪Banded Strengthening Exercises</h2>
+                <p className="opacity-90">Build muscle strength to support your knee</p>
+              </div>
+              <div className="p-6">
+                <div className="space-y-6">
+                  
+                  <div className="border-l-4 border-pink-500 pl-4">
+                    <div className="flex items-start space-x-4 mb-4">
+                      <div 
+                        className="relative cursor-pointer hover:opacity-80 transition-opacity"
+                        onClick={() => openFullscreen("MmMM1cfExJM?si=rA5TXqnaH5q3pfwa")}
+                      >
+                        <iframe
+                          width="120"
+                          height="90"
+                          src="https://www.youtube.com/embed/MmMM1cfExJM?si=rA5TXqnaH5q3pfwa"
+                          title="Straight Leg Raise Exercise"
+                          frameBorder="0"
+                          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                          allowFullScreen
+                          className="rounded-lg border border-gray-200 pointer-events-none"
+                        ></iframe>
+                        <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-0 hover:bg-opacity-20 rounded-lg transition-all">
+                          <div className="w-8 h-8 bg-white bg-opacity-80 rounded-full flex items-center justify-center">
+                            <span className="text-gray-800 text-lg">▶</span>
+                          </div>
+                        </div>
+                      </div>
+                      <div className="flex-1">
+                        <h3 className="text-lg font-semibold mb-2 text-pink-600">Banded Straight Leg Raises</h3>
+                        <p className="text-gray-600 mb-3">Strengthens hip flexor without bending the knee</p>
+                        <div className="text-sm text-gray-500">
+                          <p><strong>Sets:</strong> 3 sets of 10-15 reps</p>
+                          <p><strong>Instructions:</strong> Lie on back, lift straight leg 10 inches, hold 5 seconds</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="border-l-4 border-pink-500 pl-4">
+                    <div className="flex items-start space-x-4 mb-4">
+                      <div 
+                        className="relative cursor-pointer hover:opacity-80 transition-opacity"
+                        onClick={() => openFullscreen("dFnk1abXQP0?si=vdQmX9wQAJUov0o8")}
+                      >
+                        <iframe
+                          width="120"
+                          height="90"
+                          src="https://www.youtube.com/embed/dFnk1abXQP0?si=vdQmX9wQAJUov0o8"
+                          title="Wall Sits Exercise"
+                          frameBorder="0"
+                          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                          allowFullScreen
+                          className="rounded-lg border border-gray-200 pointer-events-none"
+                        ></iframe>
+                        <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-0 hover:bg-opacity-20 rounded-lg transition-all">
+                          <div className="w-8 h-8 bg-white bg-opacity-80 rounded-full flex items-center justify-center">
+                            <span className="text-gray-800 text-lg">▶</span>
+                          </div>
+                        </div>
+                      </div>
+                      <div className="flex-1">
+                        <h3 className="text-lg font-semibold mb-2 text-pink-600">Banded Wall Sits</h3>
+                        <p className="text-gray-600 mb-3">Builds endurance in quadriceps and glutes</p>
+                        <div className="text-sm text-gray-500">
+                          <p><strong>Duration:</strong> Hold for 20-30 seconds, 3 times</p>
+                          <p><strong>Instructions:</strong> Back against wall, slide down to 90° angle</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="border-l-4 border-pink-500 pl-4">
+                    <div className="flex items-start space-x-4 mb-4">
+                      <div 
+                        className="relative cursor-pointer hover:opacity-80 transition-opacity"
+                        onClick={() => openFullscreen("4T2P_-MV9g0?si=46EaICZGUPHeWkwJ")}
+                      >
+                        <iframe
+                          width="120"
+                          height="90"
+                          src="https://www.youtube.com/embed/4T2P_-MV9g0?si=46EaICZGUPHeWkwJ"
+                          title="Clamshell Exercise"
+                          frameBorder="0"
+                          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                          allowFullScreen
+                          className="rounded-lg border border-gray-200 pointer-events-none"
+                        ></iframe>
+                        <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-0 hover:bg-opacity-20 rounded-lg transition-all">
+                          <div className="w-8 h-8 bg-white bg-opacity-80 rounded-full flex items-center justify-center">
+                            <span className="text-gray-800 text-lg">▶</span>
+                          </div>
+                        </div>
+                      </div>
+                      <div className="flex-1">
+                        <h3 className="text-lg font-semibold mb-2 text-pink-600">Banded Clamshells</h3>
+                        <p className="text-gray-600 mb-3">Strengthens hip abductors and external rotators</p>
+                        <div className="text-sm text-gray-500">
+                          <p><strong>Sets:</strong> 2 sets of 15 reps each side</p>
+                          <p><strong>Instructions:</strong> Side-lying, lift top knee while keeping feet together</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="border-l-4 border-pink-500 pl-4">
+                    <div className="flex items-start space-x-4 mb-4">
+                      <div 
+                        className="relative cursor-pointer hover:opacity-80 transition-opacity"
+                        onClick={() => openFullscreen("xrS2naqqB1E?si=7Zw5Jp2oVsQslYOc")}
+                      >
+                        <iframe
+                          width="120"
+                          height="90"
+                          src="https://www.youtube.com/embed/xrS2naqqB1E?si=7Zw5Jp2oVsQslYOc"
+                          title="Glute Bridge Exercise"
+                          frameBorder="0"
+                          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                          allowFullScreen
+                          className="rounded-lg border border-gray-200 pointer-events-none"
+                        ></iframe>
+                        <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-0 hover:bg-opacity-20 rounded-lg transition-all">
+                          <div className="w-8 h-8 bg-white bg-opacity-80 rounded-full flex items-center justify-center">
+                            <span className="text-gray-800 text-lg">▶</span>
+                          </div>
+                        </div>
+                      </div>
+                      <div className="flex-1">
+                        <h3 className="text-lg font-semibold mb-2 text-pink-600">Banded Glute Bridges</h3>
+                        <p className="text-gray-600 mb-3">Activates glutes and supports knee alignment</p>
+                        <div className="text-sm text-gray-500">
+                          <p><strong>Sets:</strong> 3 sets of 12-15 reps</p>
+                          <p><strong>Instructions:</strong> Lie on back, lift hips up, squeeze glutes</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+
             {/* Stretching Exercises */}
             <div className="bg-white rounded-lg shadow-lg overflow-hidden">
               <div className="bg-green-600 text-white p-6">
