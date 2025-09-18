@@ -6,6 +6,9 @@ export default function Home() {
     <div className="min-h-screen bg-gray-50">
       {/* Hero Section */}
       <section className="flex flex-col items-center justify-center min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 px-4">
+        <button className="mb-8 px-6 py-3 bg-indigo-600 text-white font-semibold rounded-lg hover:bg-indigo-700 transition-colors">
+          <Link href="/diary">Workout Diary</Link>
+        </button>
         <div className="text-center max-w-4xl mx-auto">
           <h1 className="text-5xl md:text-6xl text-gray-900 font-bold mb-4">
             Penny, let's fix that knee pain!
