@@ -1,11 +1,18 @@
 "use client";
+
 import { useState, useEffect } from "react";
+import Link from "next/link";
+import { createClient } from "@supabase/supabase-js";
 
 const EXERCISES = [
   "Straight Leg Raises",
   "Wall Sits",
   "Clamshells",
   "Glute Bridges",
+  "Banded Straight Leg Raises",
+  "Banded Wall Sits",
+  "Banded Clamshells",
+  "Banded Glute Bridges",
   "IT Band Stretch",
   "Hip Flexor Stretch",
   "Hamstring Stretch",
@@ -16,8 +23,9 @@ function getToday() {
   return new Date().toISOString().slice(0, 10);
 }
 
-
-import Link from "next/link";
+const SUPABASE_URL = "https://wrzwblzteydkwmgvwuie.supabase.co";
+const SUPABASE_ANON_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6IndyendibHp0ZXlka3dtZ3Z3dWllIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTgyNzY1ODksImV4cCI6MjA3Mzg1MjU4OX0.xQQvrtC2dCuNRI4UvWq3vXafdoWbHl6m6Qa7jZ1foAo";
+const supabase = createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
 
 export default function DiaryPage() {
   const [selectedDate, setSelectedDate] = useState(getToday());
@@ -25,27 +33,77 @@ export default function DiaryPage() {
   const [sets, setSets] = useState("");
   const [reps, setReps] = useState("");
   const [notes, setNotes] = useState("");
-  const [entries, setEntries] = useState<{ [date: string]: any[] }>({});
+  const [entries, setEntries] = useState<any[]>([]);
+  const [loading, setLoading] = useState(false);
 
+  // Fetch entries for selected date
   useEffect(() => {
-    const stored = localStorage.getItem("diaryEntries");
-    if (stored) setEntries(JSON.parse(stored));
-  }, []);
-  useEffect(() => {
-    localStorage.setItem("diaryEntries", JSON.stringify(entries));
-  }, [entries]);
+    setLoading(true);
+    supabase
+      .from("diary_entries")
+      .select("id, exercise, sets, reps, notes, date")
+      .eq("date", selectedDate)
+      .order("created_at", { ascending: true })
+      .then(({ data, error }) => {
+        if (error) {
+          console.error("Fetch error:", error);
+        } else {
+          console.log("Fetched entries:", data);
+        }
+        setEntries(data || []);
+        setLoading(false);
+      });
+  }, [selectedDate]);
 
-  function addEntry() {
+  async function addEntry() {
     if (!exercise) return;
-    const newEntry = { exercise, sets, reps, notes };
-    setEntries((prev) => {
-      const dayEntries = prev[selectedDate] || [];
-      return { ...prev, [selectedDate]: [...dayEntries, newEntry] };
+    setLoading(true);
+    const { error: insertError, data: insertData } = await supabase.from("diary_entries").insert({
+      date: selectedDate,
+      exercise,
+      sets: sets ? parseInt(sets) : null,
+      reps: reps ? parseInt(reps) : null,
+      notes,
     });
+    if (insertError) {
+      console.error("Insert error:", insertError);
+    } else {
+      console.log("Insert result:", insertData);
+    }
     setExercise("");
     setSets("");
     setReps("");
     setNotes("");
+    // Refresh entries
+    supabase
+      .from("diary_entries")
+      .select("id, exercise, sets, reps, notes, date")
+      .eq("date", selectedDate)
+      .order("created_at", { ascending: true })
+      .then(({ data, error }) => {
+        if (error) {
+          console.error("Fetch after insert error:", error);
+        } else {
+          console.log("Fetched after insert:", data);
+        }
+        setEntries(data || []);
+        setLoading(false);
+      });
+  }
+
+  async function deleteEntry(id: number) {
+    setLoading(true);
+    await supabase.from("diary_entries").delete().eq("id", id);
+    // Refresh entries
+    supabase
+      .from("diary_entries")
+      .select("id, exercise, sets, reps, notes")
+      .eq("date", selectedDate)
+      .order("created_at", { ascending: true })
+      .then(({ data }) => {
+        setEntries(data || []);
+        setLoading(false);
+      });
   }
 
   return (
@@ -59,16 +117,6 @@ export default function DiaryPage() {
           <span className="text-lg font-bold text-gray-700">Workout Diary</span>
         </div>
       </nav>
-
-      {/* Hero Section */}
-      <section className="py-16 px-4 bg-gradient-to-br from-blue-50 to-indigo-100">
-        <div className="max-w-2xl mx-auto text-center">
-          <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">Track Your Progress</h1>
-          <p className="text-xl text-gray-600 mb-8">
-            Select a day, log your exercises, and build your recovery journey!
-          </p>
-        </div>
-      </section>
 
       {/* Diary Card Section */}
       <section className="py-12 px-4">
@@ -129,12 +177,21 @@ export default function DiaryPage() {
 
             <h2 className="text-xl font-semibold mb-2 text-blue-700">Entries for {selectedDate}:</h2>
             <div>
-              {(entries[selectedDate] && entries[selectedDate].length > 0) ? (
-                <ul className="space-y-2 text-gray-600">
-                  {entries[selectedDate].map((entry, idx) => (
-                    <li key={idx} className="bg-gray-50 border border-blue-100 p-3 rounded">
-                      <strong className="text-blue-700">{entry.exercise}</strong> — {entry.sets} sets x {entry.reps} reps
-                      {entry.notes && <div className="text-sm text-gray-600 mt-1">{entry.notes}</div>}
+              {loading ? (
+                <div className="text-gray-500">Loading...</div>
+              ) : entries.length > 0 ? (
+                <ul className="space-y-2">
+                  {entries.map((entry: any) => (
+                    <li key={entry.id} className="bg-gray-50 border border-blue-100 p-3 rounded flex justify-between items-start">
+                      <div className="text-gray-700">
+                        <strong className="text-blue-700">{entry.exercise}</strong> — {entry.sets} sets x {entry.reps} reps
+                        {entry.notes && <div className="text-sm text-gray-600 mt-1">{entry.notes}</div>}
+                      </div>
+                      <button
+                        className="ml-4 text-red-500 hover:text-red-700 text-sm px-2 py-1 rounded border border-red-200 bg-red-50"
+                        onClick={() => deleteEntry(entry.id)}
+                        title="Delete entry"
+                      >Delete</button>
                     </li>
                   ))}
                 </ul>
